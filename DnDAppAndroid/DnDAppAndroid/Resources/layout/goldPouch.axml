@@ -107,7 +107,7 @@
                 android:layout_marginTop="30px"
                 android:layout_marginLeft="10px" />
             <EditText
-                android:inputType="number"
+                android:inputType="numberSigned"
                 android:layout_width="match_parent"
                 android:layout_height="80px"
                 android:id="@+id/goldAmount_incr"
@@ -115,10 +115,18 @@
                 android:layout_marginLeft="200px"
                 android:layout_marginRight="200px"
                 android:textSize="40px"
-                android:text="0"
                 android:textStyle="bold"
                 android:isScrollContainer="false"
                 android:singleLine="true" />
+            <TextView
+                android:text="+ "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gold_modif"
+                android:textSize="35px"
+                android:layout_marginTop="-60px"
+                android:layout_marginLeft="600px"
+                android:layout_marginBottom="10px" />
             <TextView
                 android:text="Silver : "
                 android:layout_width="match_parent"
@@ -128,7 +136,7 @@
                 android:layout_marginTop="30px"
                 android:layout_marginLeft="10px" />
             <EditText
-                android:inputType="number"
+                android:inputType="numberSigned"
                 android:layout_width="match_parent"
                 android:layout_height="80px"
                 android:id="@+id/silverAmount_incr"
@@ -136,8 +144,16 @@
                 android:layout_marginLeft="200px"
                 android:layout_marginRight="200px"
                 android:textSize="40px"
-                android:text="0"
                 android:textStyle="bold" />
+            <TextView
+                android:text="+ "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/silver_modif"
+                android:textSize="35px"
+                android:layout_marginTop="-60px"
+                android:layout_marginLeft="600px"
+                android:layout_marginBottom="10px" />
             <TextView
                 android:text="Copper : "
                 android:layout_width="match_parent"
@@ -147,7 +163,7 @@
                 android:layout_marginTop="30px"
                 android:layout_marginLeft="10px" />
             <EditText
-                android:inputType="number"
+                android:inputType="numberSigned"
                 android:layout_width="match_parent"
                 android:layout_height="80px"
                 android:id="@+id/copperAmount_incr"
@@ -155,8 +171,16 @@
                 android:layout_marginLeft="200px"
                 android:layout_marginRight="200px"
                 android:textSize="40px"
-                android:text="0"
                 android:textStyle="bold" />
+            <TextView
+                android:text="+ "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/copper_modif"
+                android:textSize="35px"
+                android:layout_marginTop="-60px"
+                android:layout_marginLeft="600px"
+                android:layout_marginBottom="10px" />
             <TextView
                 android:text="Split Count :"
                 android:layout_width="match_parent"
@@ -188,6 +212,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/split_money"
+                android:textSize="35px"
+                android:layout_marginTop="-5px" />
+            <Button
+                android:text="Reset Pouch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reset_money"
                 android:textSize="35px"
                 android:layout_marginTop="-5px" />
         </LinearLayout>

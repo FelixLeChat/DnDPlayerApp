@@ -31,14 +31,18 @@ namespace DnDAppAndroid.Utility.GoldPouch
             public static Amount operator +(Amount amount1, Amount amount2)
             {
                 var total = amount1.GetTotalValue() + amount2.GetTotalValue();
+                return Reduce(total);
+            }
 
+            public static Amount Reduce(int total)
+            {
                 if (total < 0)
                     throw new Exception("out of funds");
 
-                var totalGold = total/_goldValue;
-                var left = total%_goldValue;
-                var totalSilver = left/_silverValue;
-                left = left%_silverValue;
+                var totalGold = total / _goldValue;
+                var left = total % _goldValue;
+                var totalSilver = left / _silverValue;
+                left = left % _silverValue;
                 var totalCopper = left;
 
                 return new Amount()
@@ -77,6 +81,11 @@ namespace DnDAppAndroid.Utility.GoldPouch
         {
             CurrentPouch += amount;
             SavePouch();
+        }
+
+        public void ResetPouch()
+        {
+            CurrentPouch = new Amount();
         }
 
         private void SavePouch()
