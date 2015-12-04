@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="DnDAppAndroid\DnDAppAndroid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DnDAppAndroid\Activity\CreateCharActivity.cs">
+    <Files>
+      <File FileName="DnDAppAndroid\obj\Debug\resourcecache\EE66BB6CA89955E2946982401C89190B\res\layout\abc_screen_toolbar.xml" Line="1" Column="1" />
+      <File FileName="..\..\..\..\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="1" Column="1" />
+      <File FileName="DnDAppAndroid\obj\Debug\android\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="c:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\Activity\MainActivity.cs" Line="15" Column="1" />
+      <File FileName="DnDAppAndroid\Activity\CreateCharActivity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

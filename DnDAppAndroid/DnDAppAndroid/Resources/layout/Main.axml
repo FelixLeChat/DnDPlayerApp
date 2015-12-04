@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/createChar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Character"
+        android:layout_marginTop="200dp" />
+    <Button
+        android:text="Load Character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadChar" />
+</LinearLayout>
