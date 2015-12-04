@@ -54,7 +54,7 @@ namespace DnDAppAndroid.Activity
 
         private void SplitMoney(object obj, EventArgs e)
         {
-            var splitText = FindViewById<EditText>(Resource.Id.split_money).Text;
+            var splitText = FindViewById<EditText>(Resource.Id.splitAmount_incr).Text;
             var splitCount = 0;
             int.TryParse(splitText, out splitCount);
 
@@ -63,7 +63,7 @@ namespace DnDAppAndroid.Activity
                 return;
 
             // get value in copper coins
-            var value = pouch.CurrentPouch.GetTotalValue();
+            var value = GetSelectedAmount().GetTotalValue();
             value = value/splitCount;
             var reduced = GoldPouch.Amount.Reduce(value);
             pouch.AddAmountToPouch(reduced);

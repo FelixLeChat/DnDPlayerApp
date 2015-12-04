@@ -1442,8 +1442,8 @@ namespace DnDAppAndroid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c006b
-			public const int action0 = 2131492971;
+			// aapt resource value: 0x7f0c006c
+			public const int action0 = 2131492972;
 			
 			// aapt resource value: 0x7f0c0041
 			public const int action_bar = 2131492929;
@@ -1469,8 +1469,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0042
 			public const int action_context_bar = 2131492930;
 			
-			// aapt resource value: 0x7f0c006f
-			public const int action_divider = 2131492975;
+			// aapt resource value: 0x7f0c0070
+			public const int action_divider = 2131492976;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1511,8 +1511,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c002b
 			public const int buttonPanel = 2131492907;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int cancel_action = 2131492972;
+			// aapt resource value: 0x7f0c006d
+			public const int cancel_action = 2131492973;
 			
 			// aapt resource value: 0x7f0c0054
 			public const int characterName = 2131492948;
@@ -1520,8 +1520,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0039
 			public const int checkbox = 2131492921;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int chronometer = 2131492978;
+			// aapt resource value: 0x7f0c0073
+			public const int chronometer = 2131492979;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int collapseActionView = 2131492892;
@@ -1538,8 +1538,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0063
 			public const int copper_modif = 2131492963;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int createChar = 2131492969;
+			// aapt resource value: 0x7f0c006a
+			public const int createChar = 2131492970;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int custom = 2131492919;
@@ -1562,8 +1562,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0019
 			public const int end = 2131492889;
 			
-			// aapt resource value: 0x7f0c0077
-			public const int end_padder = 2131492983;
+			// aapt resource value: 0x7f0c0078
+			public const int end_padder = 2131492984;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int expand_activities_button = 2131492901;
@@ -1595,20 +1595,20 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0026
 			public const int image = 2131492902;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int increase_money = 2131492964;
+			// aapt resource value: 0x7f0c0065
+			public const int increase_money = 2131492965;
 			
-			// aapt resource value: 0x7f0c0076
-			public const int info = 2131492982;
+			// aapt resource value: 0x7f0c0077
+			public const int info = 2131492983;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int inventory = 2131492968;
+			// aapt resource value: 0x7f0c0069
+			public const int inventory = 2131492969;
 			
-			// aapt resource value: 0x7f0c0070
-			public const int line1 = 2131492976;
+			// aapt resource value: 0x7f0c0071
+			public const int line1 = 2131492977;
 			
-			// aapt resource value: 0x7f0c0074
-			public const int line3 = 2131492980;
+			// aapt resource value: 0x7f0c0075
+			public const int line3 = 2131492981;
 			
 			// aapt resource value: 0x7f0c0050
 			public const int linearLayout1 = 2131492944;
@@ -1619,14 +1619,14 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0028
 			public const int list_item = 2131492904;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int loadChar = 2131492970;
+			// aapt resource value: 0x7f0c006b
+			public const int loadChar = 2131492971;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int manage_gold = 2131492967;
+			// aapt resource value: 0x7f0c0068
+			public const int manage_gold = 2131492968;
 			
-			// aapt resource value: 0x7f0c006e
-			public const int media_actions = 2131492974;
+			// aapt resource value: 0x7f0c006f
+			public const int media_actions = 2131492975;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int middle = 2131492890;
@@ -1661,8 +1661,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c003b
 			public const int radio = 2131492923;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int reset_money = 2131492966;
+			// aapt resource value: 0x7f0c0067
+			public const int reset_money = 2131492967;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int screen = 2131492884;
@@ -1736,11 +1736,14 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c002c
 			public const int spacer = 2131492908;
 			
+			// aapt resource value: 0x7f0c0064
+			public const int splitAmount_incr = 2131492964;
+			
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int split_money = 2131492965;
+			// aapt resource value: 0x7f0c0066
+			public const int split_money = 2131492966;
 			
 			// aapt resource value: 0x7f0c0015
 			public const int src_atop = 2131492885;
@@ -1751,8 +1754,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0017
 			public const int src_over = 2131492887;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int status_bar_latest_event_content = 2131492973;
+			// aapt resource value: 0x7f0c006e
+			public const int status_bar_latest_event_content = 2131492974;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int submit_area = 2131492940;
@@ -1760,11 +1763,11 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c0075
-			public const int text = 2131492981;
+			// aapt resource value: 0x7f0c0076
+			public const int text = 2131492982;
 			
-			// aapt resource value: 0x7f0c0073
-			public const int text2 = 2131492979;
+			// aapt resource value: 0x7f0c0074
+			public const int text2 = 2131492980;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
@@ -1778,8 +1781,8 @@ namespace DnDAppAndroid
 			// aapt resource value: 0x7f0c0056
 			public const int textView3 = 2131492950;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int time = 2131492977;
+			// aapt resource value: 0x7f0c0072
+			public const int time = 2131492978;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int title = 2131492906;
