@@ -1,3 +1,4 @@
+using System;
 using Android.App;
 using Android.OS;
 using Android.Widget;
@@ -18,6 +19,18 @@ namespace DnDAppAndroid.Activity
             button.Click += delegate
             {
                 StartActivity(typeof(MainActivity));
+            };
+
+            button = FindViewById<Button>(Resource.Id.manage_gold);
+            button.Click += delegate
+            {
+                StartActivity(typeof(GoldPouchActivity));
+            };
+
+            button = FindViewById<Button>(Resource.Id.inventory);
+            button.Click += delegate
+            {
+                StartActivity(typeof(InventoryActivity));
             };
         }
     }

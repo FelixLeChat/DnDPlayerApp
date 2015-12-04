@@ -19,7 +19,8 @@
             android:id="@+id/textView1"
             android:textSize="40px"
             android:layout_marginLeft="150px"
-            android:layout_marginTop="30px" />
+            android:layout_marginTop="30px"
+            android:textStyle="bold" />
         <Button
             android:layout_width="120px"
             android:layout_height="wrap_content"
@@ -29,7 +30,7 @@
             android:text="Gold Pouch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/manage_cash"
+            android:id="@+id/manage_gold"
             android:layout_marginTop="100px" />
         <Button
             android:text="Inventory"

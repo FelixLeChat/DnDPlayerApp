@@ -1647,7 +1647,7 @@ containing a value of this type.
         public static final int listMode=0x7f0c0009;
         public static final int list_item=0x7f0c0028;
         public static final int loadChar=0x7f0c005d;
-        public static final int manage_cash=0x7f0c005a;
+        public static final int manage_gold=0x7f0c005a;
         public static final int media_actions=0x7f0c0061;
         public static final int middle=0x7f0c001a;
         public static final int multiply=0x7f0c0013;
@@ -1736,20 +1736,22 @@ containing a value of this type.
         public static final int abc_search_view=0x7f040017;
         public static final int abc_select_dialog_material=0x7f040018;
         public static final int createchar=0x7f040019;
-        public static final int loadchar=0x7f04001a;
-        public static final int main=0x7f04001b;
-        public static final int notification_media_action=0x7f04001c;
-        public static final int notification_media_cancel_action=0x7f04001d;
-        public static final int notification_template_big_media=0x7f04001e;
-        public static final int notification_template_big_media_narrow=0x7f04001f;
-        public static final int notification_template_lines=0x7f040020;
-        public static final int notification_template_media=0x7f040021;
-        public static final int notification_template_part_chronometer=0x7f040022;
-        public static final int notification_template_part_time=0x7f040023;
-        public static final int select_dialog_item_material=0x7f040024;
-        public static final int select_dialog_multichoice_material=0x7f040025;
-        public static final int select_dialog_singlechoice_material=0x7f040026;
-        public static final int support_simple_spinner_dropdown_item=0x7f040027;
+        public static final int goldpouch=0x7f04001a;
+        public static final int inventory=0x7f04001b;
+        public static final int loadchar=0x7f04001c;
+        public static final int main=0x7f04001d;
+        public static final int notification_media_action=0x7f04001e;
+        public static final int notification_media_cancel_action=0x7f04001f;
+        public static final int notification_template_big_media=0x7f040020;
+        public static final int notification_template_big_media_narrow=0x7f040021;
+        public static final int notification_template_lines=0x7f040022;
+        public static final int notification_template_media=0x7f040023;
+        public static final int notification_template_part_chronometer=0x7f040024;
+        public static final int notification_template_part_time=0x7f040025;
+        public static final int select_dialog_item_material=0x7f040026;
+        public static final int select_dialog_multichoice_material=0x7f040027;
+        public static final int select_dialog_singlechoice_material=0x7f040028;
+        public static final int support_simple_spinner_dropdown_item=0x7f040029;
     }
     public static final class mipmap {
         public static final int icon=0x7f030000;

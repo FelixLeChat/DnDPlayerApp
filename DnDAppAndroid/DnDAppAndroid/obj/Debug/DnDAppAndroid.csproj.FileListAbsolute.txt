@@ -22,5 +22,7 @@ C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\R.cs.flag
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\uploadflags.txt
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\drawable\backbuttonimg.png
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\DnDAppAndroid.csprojResolveAssemblyReference.cache
+C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\layout\goldpouch.xml
+C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\layout\inventory.xml
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\DnDAppAndroid.dll.mdb
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\bin\Debug\DnDAppAndroid.dll.mdb
