@@ -61,6 +61,28 @@
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
+        android:id="@+id/subClassLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Sub-Race :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textSize="35px"
+            android:layout_marginTop="30px" />
+        <Spinner
+            android:layout_width="310px"
+            android:layout_height="80px"
+            android:layout_toRightOf="@id/textView3"
+            android:id="@+id/subClassSelector"
+            android:layout_marginLeft="135px"
+            android:layout_marginTop="15px"
+            android:prompt="@string/subClass_prompt" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="100px"
         android:id="@+id/alignmentLayout">

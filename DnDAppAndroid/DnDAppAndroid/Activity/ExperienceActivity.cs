@@ -75,6 +75,7 @@ namespace DnDAppAndroid.Activity
         private void UpdateVisual()
         {
             FindViewById<EditText>(Resource.Id.experienceAmount).Text = _currentExperience.Exp.ToString();
+            FindViewById<EditText>(Resource.Id.levelAmount).Text = _currentExperience.GetLevel().ToString();
         }
     }
 }
