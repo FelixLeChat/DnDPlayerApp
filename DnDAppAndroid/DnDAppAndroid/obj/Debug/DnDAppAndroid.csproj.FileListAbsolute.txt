@@ -24,5 +24,6 @@ C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\drawable\backbutto
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\layout\goldpouch.xml
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\layout\inventory.xml
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\DnDAppAndroid.csprojResolveAssemblyReference.cache
+C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\res\layout\experience.xml
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\obj\Debug\DnDAppAndroid.dll.mdb
 C:\Users\Public\DND\DnDAppAndroid\DnDAppAndroid\bin\Debug\DnDAppAndroid.dll.mdb

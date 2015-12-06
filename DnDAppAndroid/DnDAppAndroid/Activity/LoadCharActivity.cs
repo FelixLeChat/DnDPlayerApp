@@ -32,6 +32,13 @@ namespace DnDAppAndroid.Activity
             {
                 StartActivity(typeof(InventoryActivity));
             };
+
+            button = FindViewById<Button>(Resource.Id.experience);
+            button.Click += delegate
+            {
+                StartActivity(typeof(ExperienceActivity));
+            };
+            
         }
     }
 }
