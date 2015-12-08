@@ -1,8 +1,6 @@
 using System;
 using Android.App;
-using Android.Graphics;
 using Android.OS;
-using Android.Text;
 using Android.Widget;
 using DnDAppAndroid.Utility.GoldPouch;
 
@@ -11,7 +9,7 @@ namespace DnDAppAndroid.Activity
     [Activity(Label = "GoldPouchActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class GoldPouchActivity : Android.App.Activity
     {
-        private GoldPouch pouch = GoldPouch.Instance;
+        private readonly GoldPouch _pouch = GoldPouch.Instance;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,13 +24,13 @@ namespace DnDAppAndroid.Activity
             };
 
             var editText = FindViewById<EditText>(Resource.Id.goldAmount);
-            editText.Text = pouch.CurrentPouch.Gold.ToString();
+            editText.Text = _pouch.CurrentPouch.Gold.ToString();
 
             editText = FindViewById<EditText>(Resource.Id.silverAmount);
-            editText.Text = pouch.CurrentPouch.Silver.ToString();
+            editText.Text = _pouch.CurrentPouch.Silver.ToString();
 
             editText = FindViewById<EditText>(Resource.Id.copperAmount);
-            editText.Text = pouch.CurrentPouch.Copper.ToString();
+            editText.Text = _pouch.CurrentPouch.Copper.ToString();
 
             button = FindViewById<Button>(Resource.Id.increase_money);
             button.Click += IncreaceMoney;
@@ -47,7 +45,7 @@ namespace DnDAppAndroid.Activity
         private void IncreaceMoney(object obj, EventArgs e)
         {
             var selected = GetSelectedAmount();
-            pouch.AddAmountToPouch(selected);
+            _pouch.AddAmountToPouch(selected);
             UpdateVisual();
             UpdateIncr(selected);
         }
@@ -55,7 +53,7 @@ namespace DnDAppAndroid.Activity
         private void SplitMoney(object obj, EventArgs e)
         {
             var splitText = FindViewById<EditText>(Resource.Id.splitAmount_incr).Text;
-            var splitCount = 0;
+            int splitCount;
             int.TryParse(splitText, out splitCount);
 
             // can't split with 0
@@ -66,7 +64,7 @@ namespace DnDAppAndroid.Activity
             var value = GetSelectedAmount().GetTotalValue();
             value = value/splitCount;
             var reduced = GoldPouch.Amount.Reduce(value);
-            pouch.AddAmountToPouch(reduced);
+            _pouch.AddAmountToPouch(reduced);
             UpdateVisual();
             UpdateIncr(reduced);
         }
@@ -80,7 +78,7 @@ namespace DnDAppAndroid.Activity
 
             alertDialog.SetButton("Yes", (s, ev) =>
             {
-                pouch.ResetPouch();
+                _pouch.ResetPouch();
                 UpdateVisual();
             });
 
@@ -94,15 +92,15 @@ namespace DnDAppAndroid.Activity
         private GoldPouch.Amount GetSelectedAmount()
         {
             var editField = FindViewById<EditText>(Resource.Id.goldAmount_incr);
-            var gold = 0;
+            int gold;
             int.TryParse(editField.Text, out gold);
 
             editField = FindViewById<EditText>(Resource.Id.silverAmount_incr);
-            var silver = 0;
+            int silver;
             int.TryParse(editField.Text, out silver);
 
             editField = FindViewById<EditText>(Resource.Id.copperAmount_incr);
-            var copper = 0;
+            int copper;
             int.TryParse(editField.Text, out copper);
 
             return new GoldPouch.Amount()
@@ -118,9 +116,9 @@ namespace DnDAppAndroid.Activity
             FindViewById<EditText>(Resource.Id.goldAmount_incr).Text = "";
             FindViewById<EditText>(Resource.Id.silverAmount_incr).Text = "";
             FindViewById<EditText>(Resource.Id.copperAmount_incr).Text = "";
-            FindViewById<EditText>(Resource.Id.goldAmount).Text = pouch.CurrentPouch.Gold.ToString();
-            FindViewById<EditText>(Resource.Id.silverAmount).Text = pouch.CurrentPouch.Silver.ToString();
-            FindViewById<EditText>(Resource.Id.copperAmount).Text = pouch.CurrentPouch.Copper.ToString();
+            FindViewById<EditText>(Resource.Id.goldAmount).Text = _pouch.CurrentPouch.Gold.ToString();
+            FindViewById<EditText>(Resource.Id.silverAmount).Text = _pouch.CurrentPouch.Silver.ToString();
+            FindViewById<EditText>(Resource.Id.copperAmount).Text = _pouch.CurrentPouch.Copper.ToString();
         }
 
         private void UpdateIncr(GoldPouch.Amount amount)

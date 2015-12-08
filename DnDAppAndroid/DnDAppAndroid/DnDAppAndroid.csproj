@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity\CreateCharacter\AbstractHandler.cs" />
+    <Compile Include="Activity\CreateCharacter\AlignmentHandler.cs" />
     <Compile Include="Activity\CreateCharacter\RaceHandler.cs" />
     <Compile Include="Activity\CreateCharacter\SubRaceHandler.cs" />
     <Compile Include="Activity\CreateCharActivity.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Activity\MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Alignment\AlignmentManager.cs" />
     <Compile Include="Utility\Experience\Experience.cs" />
     <Compile Include="Utility\GoldPouch\GoldPouch.cs" />
     <Compile Include="Utility\Race\ConcreteRaceAlternative\DarkElf.cs" />

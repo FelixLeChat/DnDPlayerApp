@@ -26,11 +26,9 @@ namespace DnDAppAndroid.Activity
                 StartActivity(typeof(LoadCharActivity));
             };
 
-            button = FindViewById<Button>(Resource.Id.increase_experience);
-            button.Click += IncreaceExperience;
-
-            button = FindViewById<Button>(Resource.Id.split_experience);
-            button.Click += SplitExperience;
+            FindViewById<Button>(Resource.Id.increase_experience).Click += IncreaceExperience;
+            FindViewById<Button>(Resource.Id.split_experience).Click += SplitExperience;
+            FindViewById<Button>(Resource.Id.reset_experience).Click += ComplexDialogClick;
 
             UpdateVisual();
             UpdateIncr(0);
@@ -47,7 +45,7 @@ namespace DnDAppAndroid.Activity
         private void SplitExperience(object obj, EventArgs arg)
         {
             var experience = GetCurrentExperience();
-            var div = 0;
+            int div;
             int.TryParse(FindViewById<TextView>(Resource.Id.splitAmount_incr).Text, out div);
 
             if (div == 0)
@@ -59,23 +57,45 @@ namespace DnDAppAndroid.Activity
             UpdateIncr(total);
         }
 
+        void ComplexDialogClick(object sender, EventArgs e)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            AlertDialog alertDialog = builder.Create();
+            alertDialog.SetTitle("Experience Reset");
+            alertDialog.SetMessage("Do you really want to reset your experience ?");
+
+            alertDialog.SetButton("Yes", (s, ev) =>
+            {
+                _currentExperience.Reset();
+                UpdateVisual();
+            });
+
+            alertDialog.SetButton2("No", (s, ev) =>
+            {
+            });
+
+            alertDialog.Show();
+        }
+
         private int GetCurrentExperience()
         {
             var editField = FindViewById<EditText>(Resource.Id.experienceAmount_incr);
-            var experience = 0;
+            int experience;
             int.TryParse(editField.Text, out experience);
             return experience;
         }
 
         private void UpdateIncr(int value)
         {
-            FindViewById<TextView>(Resource.Id.experience_modif).Text = "+ " + value;
+            var text = (value == 0) ? "" : value.ToString();
+            FindViewById<TextView>(Resource.Id.experience_modif).Text = "+ " + text;
         }
 
         private void UpdateVisual()
         {
             FindViewById<EditText>(Resource.Id.experienceAmount).Text = _currentExperience.Exp.ToString();
             FindViewById<EditText>(Resource.Id.levelAmount).Text = _currentExperience.GetLevel().ToString();
+            FindViewById<EditText>(Resource.Id.proficiencyAmount).Text = _currentExperience.GetProficiency().ToString();
         }
     }
 }

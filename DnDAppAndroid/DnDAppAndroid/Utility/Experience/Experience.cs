@@ -57,5 +57,20 @@ namespace DnDAppAndroid.Utility.Experience
             // Max level
             return _levelExperience.Count;
         }
+
+        public int GetProficiency()
+        {
+            var level = GetLevel();
+            var proficiency = 2;
+
+            proficiency += (level-1)/4;
+
+            return proficiency;
+        }
+
+        public void Reset()
+        {
+            Exp = 0;
+        }
     }
 }
