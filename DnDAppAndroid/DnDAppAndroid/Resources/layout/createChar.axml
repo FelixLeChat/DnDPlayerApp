@@ -50,7 +50,7 @@
             android:textSize="35px"
             android:layout_marginTop="30px" />
         <Spinner
-            android:layout_width="310px"
+            android:layout_width="450px"
             android:layout_height="80px"
             android:layout_toRightOf="@id/textView3"
             android:id="@+id/raceSelector"
@@ -61,7 +61,7 @@
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
-        android:id="@+id/subClassLayout"
+        android:id="@+id/subRaceLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -72,13 +72,13 @@
             android:textSize="35px"
             android:layout_marginTop="30px" />
         <Spinner
-            android:layout_width="310px"
+            android:layout_width="450px"
             android:layout_height="80px"
             android:layout_toRightOf="@id/textView3"
-            android:id="@+id/subClassSelector"
+            android:id="@+id/subRaceSelector"
             android:layout_marginLeft="135px"
             android:layout_marginTop="15px"
-            android:prompt="@string/subClass_prompt" />
+            android:prompt="@string/subRace_prompt" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -94,12 +94,34 @@
             android:textSize="35px"
             android:layout_marginTop="30px" />
         <Spinner
-            android:layout_width="310px"
+            android:layout_width="450px"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/textView3"
             android:id="@+id/aignmentSelector"
             android:layout_marginLeft="140px"
             android:layout_marginTop="15px"
             android:prompt="@string/alignment_prompt" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:id="@+id/classLayout">
+        <TextView
+            android:text="Class :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textSize="35px"
+            android:layout_marginTop="30px" />
+        <Spinner
+            android:layout_width="450px"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textView3"
+            android:id="@+id/classSelector"
+            android:layout_marginLeft="97dp"
+            android:layout_marginTop="15px"
+            android:prompt="@string/class_prompt" />
     </RelativeLayout>
 </LinearLayout>

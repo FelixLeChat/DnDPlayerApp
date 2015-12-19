@@ -19,8 +19,10 @@ namespace DnDAppAndroid.Activity.CreateCharacter
             _selector = selector;
 
             _nextHandler = new AlignmentHandler(activity,
-                activity.FindViewById<RelativeLayout>(Resource.Id.subClassLayout),
+                activity.FindViewById<RelativeLayout>(Resource.Id.alignmentLayout),
                 activity.FindViewById<Spinner>(Resource.Id.aignmentSelector));
+
+            _nextHandler.ShowHandler();
         }
 
         public override void ShowHandler()

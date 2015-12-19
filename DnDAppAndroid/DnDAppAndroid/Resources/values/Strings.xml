@@ -4,5 +4,6 @@
 	<string name="app_name">DnDAppAndroid</string>
   <string name="race_prompt">Choose a race</string>
   <string name="alignment_prompt">Choose a aligment</string>
-  <string name="subClass_prompt">Choose a Sub Class</string>
+  <string name="subRace_prompt">Choose a Sub Race</string>
+  <string name="class_prompt">Choose a Class</string>
 </resources>

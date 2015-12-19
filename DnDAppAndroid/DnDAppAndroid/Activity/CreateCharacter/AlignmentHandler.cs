@@ -1,18 +1,26 @@
-using System;
 using Android.Views;
 using Android.Widget;
 using DnDAppAndroid.Utility.Alignment;
 
 namespace DnDAppAndroid.Activity.CreateCharacter
 {
-    class AlignmentHandler : AbstractHandler
+    internal class AlignmentHandler : AbstractHandler
     {
-        private Spinner _selector;
+        private readonly Spinner _selector;
+        private readonly ClassHandler _nextHandler;
         private const string SpinnerSelectionResName = "alignment_spinner_selected";
+        private string _selectedAlignment;
 
         public AlignmentHandler(Android.App.Activity activity, RelativeLayout layout, Spinner selector) : base(activity, layout)
         {
             _selector = selector;
+
+            _nextHandler = new ClassHandler(activity,
+                activity.FindViewById<RelativeLayout>(Resource.Id.classLayout),
+                activity.FindViewById<Spinner>(Resource.Id.classSelector));
+
+            if(_selectedAlignment != "")
+                UpdateAlignment();
         }
 
         public override void ShowHandler()
@@ -50,6 +58,22 @@ namespace DnDAppAndroid.Activity.CreateCharacter
         {
             Editor.PutInt(SpinnerSelectionResName, e.Position);
             Editor.Apply();
+            UpdateAlignment();
+        }
+
+        private void UpdateAlignment()
+        {
+            var index = Prefs.GetInt(SpinnerSelectionResName, -1);
+            if (index < 0)
+                return;
+
+            var alignmentArray = AlignmentManager.AllAlignment;
+
+            if (index < alignmentArray.Count)
+            {
+                _selectedAlignment = alignmentArray[index];
+                _nextHandler.ShowHandler();
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using DnDAppAndroid.Utility.Race;
 
 namespace DnDAppAndroid.Activity.CreateCharacter
 {
-    class RaceHandler : AbstractHandler
+    internal class RaceHandler : AbstractHandler
     {
         private readonly Spinner _selector;
         private const string SpinnerSelectionResName = "race_spinner_selected";
@@ -18,8 +18,8 @@ namespace DnDAppAndroid.Activity.CreateCharacter
             _selector = selector;
 
             _nextHandler = new SubRaceHandler(activity,
-                activity.FindViewById<RelativeLayout>(Resource.Id.subClassLayout),
-                activity.FindViewById<Spinner>(Resource.Id.subClassSelector));
+                activity.FindViewById<RelativeLayout>(Resource.Id.subRaceLayout),
+                activity.FindViewById<Spinner>(Resource.Id.subRaceSelector));
 
             UpdateRace();
 

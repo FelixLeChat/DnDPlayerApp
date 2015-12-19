@@ -2,6 +2,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Preferences;
+using Android.Views;
 using Android.Widget;
 using DnDAppAndroid.Activity.CreateCharacter;
 
@@ -12,6 +13,7 @@ namespace DnDAppAndroid.Activity
     {
         private ISharedPreferences _prefs;
         private ISharedPreferencesEditor _editor;
+        private const string CharacterNameKey = "pref_character_name";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,15 +32,25 @@ namespace DnDAppAndroid.Activity
 
             //Character Name (Load the one in memory)
             var editText = FindViewById<EditText>(Resource.Id.characterName);
-            editText.Text = _prefs.GetString("characterName", "");
+            var name = _prefs.GetString(CharacterNameKey, "");
+
             editText.TextChanged += delegate
             {
-                _editor.PutString("characterName", editText.Text);
+                if (editText.Text == "")
+                    return;
+
+                _editor.PutString(CharacterNameKey, editText.Text);
                 _editor.Apply();
                 raceHandler.ShowHandler();
             };
-            if(editText.Text != "")
+
+            // set the registered name
+            if (name != "")
+            {
+                editText.Text = name;
                 raceHandler.ShowHandler();
+            }
+                
 
             // Add back on button
             var button = FindViewById<Button>(Resource.Id.back);
@@ -47,6 +59,16 @@ namespace DnDAppAndroid.Activity
             {
                 StartActivity(typeof(MainActivity));
             };
-}
+
+
+            //Hide other layout
+            if (name != "")
+                return;
+
+            FindViewById<RelativeLayout>(Resource.Id.raceLayout).Visibility = ViewStates.Gone;
+            FindViewById<RelativeLayout>(Resource.Id.subRaceLayout).Visibility = ViewStates.Gone;
+            FindViewById<RelativeLayout>(Resource.Id.alignmentLayout).Visibility = ViewStates.Gone;
+            FindViewById<RelativeLayout>(Resource.Id.classLayout).Visibility = ViewStates.Gone;
+        }
     }
 }

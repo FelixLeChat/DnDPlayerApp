@@ -22,7 +22,7 @@ namespace DnDAppAndroid.Activity.CreateCharacter
             Editor = Prefs.Edit();
 
             // Hide Layout
-            Layout.Visibility = ViewStates.Invisible;
+            Layout.Visibility = ViewStates.Gone;
         }
 
         public abstract void ShowHandler();

@@ -81,9 +81,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"DnDAppAndroid.dll",
 		"Xamarin.Android.Support.v4.dll",
-		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Insights.dll",
-		"System.ServiceModel.Internals.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
